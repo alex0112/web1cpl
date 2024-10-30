@@ -62,4 +62,4 @@ A friend of mine recently started a web consulting business. I contracted with h
 
 He wrote me this letter of recommendation:
 
-![Letter of Recommendation]()
+![Letter of Recommendation from Blueberry Web Services](assets/images/cody-letter-rec.png)

@@ -19,7 +19,7 @@ My first internship was at a company called BetterLinux. In my time there I pair
 
 #### Morinda Inc. - Summer 2013
 
-My second internship was at Morinda Bioactives (formerly Tahitian Noni) in their web development department. I spent the summer helping out with miscellaneous tasks that mostly involved writing HTML templates using the [HTML::Mason](https://metacpan.org/pod/HTML::Mason)
+My second internship was at Morinda Bioactives (formerly Tahitian Noni) in their web development department. I spent the summer helping out with miscellaneous tasks that mostly involved writing HTML templates using the [HTML::Mason](https://metacpan.org/pod/HTML::Mason) library.
 
 In the process of digging up old web development projects I found [this page](https://web.archive.org/web/20130814151559/http://truage.com/en-us/truage/home.html) in the wayback machine that I believe I wrote most of and had to style according to a design document that was given to me from someone in another department.
 

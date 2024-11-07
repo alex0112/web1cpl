@@ -6,26 +6,67 @@
     
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+    <link rel="stylesheet" href="assets/styles/main.css">
 
-    <script>
-    </script>
-
+    <!-- favicon extra stuffs from a favicon generator-->
+    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/images/site.webmanifest" />
+    
   </head>
-  <body>
+  
+  <script src="/assets/scripts/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
-    <main>
-      <section id="url-form" style="background: red">
+  <body>
+    <main id="main-grid">
+      <section id="url-form">
         urlform
       </section>
 
-      <section id="quick-links" style="background: green">
+      <section id="quick-links">
         quicklinks
       </section>
 
-      <section id="code" style="background: aliceblue">
-        <code>
-          
-        </code>
+      <section id="code">
+        <pre>
+          <code>
+             async fn run_server() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
+                 // First parameter is port number (optional, defaults to )
+                 let port = match env::args().nth(1) {
+                     Some(ref p) => p.to_owned(),
+                     None => "7331".to_owned(),
+                 };
+                 let addr = format!("127.0.0.1:{}", port).parse()?;
+
+                 // Load public certificate.
+                 let certs = load_certs("examples/sample.pem")?;
+                 // Load private key.
+                 let key = load_private_key("examples/sample.rsa")?;
+                 // Build TLS configuration.
+
+                 let acceptor: TlsAcceptor = build_tls_acceptor(certs, key, addr);
+
+                 // Create a TCP listener via tokio.
+                 // let incoming = AddrIncoming::bind(&addr)?;
+                 // let acceptor = TlsAcceptor::builder()
+                 //     .with_single_cert(certs, key)
+                 //     .map_err(|e| error(format!("{}", e)))?
+                 //     .with_all_versions_alpn()
+                 //     .with_incoming(incoming);
+                 
+                 let service = make_service_fn(|_| async { Ok::<_, io::Error>(service_fn(echo)) });
+                 let server = Server::builder(acceptor).serve(service);
+                 
+                 // Run the future, keep going until an error occurs.
+                 println!("Starting to serve on https://{}.", addr);
+                 server.await?;
+                 Ok(())
+             }
+          </code>
+        <pre>
       </section>
 
     </main>

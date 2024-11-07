@@ -1,13 +1,23 @@
+# Web I - Prior Learning Credit
+
+This small static page takes a github file url, validates it, and then fetches the raw code content before HTML escaping it and running it through a syntax highlighter before displaying it to the user.
+
+My goal in creating this page was to demonstrate the knowledge listed on the syllabus:
+
+![TODO Syllabus Image Here]()
+
 ## How this site was built:
 
-Hello! I just wanted to add some notes here as to how the site is constructed and why I believe it demonstrates the knowledge required by the sylabus:
+I wrote this site in vanilla HTML/CSS/Javascript with the goal of keeping it lightweight and easy to statically serve through a CDN. I used a simple CSS Grid for the layout and designed it to be reasonably mobile responsive. Unless indicated in the credits/acknowledgements section, all the work is my own written with my [preferred setup](https://github.com/alex0112/dotfiles/tree/master).
 
-![Sylabus Screenshot]()
+### A note about A.I.
+I do not use LLMs (e.g. ChatGPT, Claude etc.) to generate code, as I feel this ultimately deprives me of the context surrounding a codebase. When working I typically leverage LLMs for concept related questions, search, and rubber-duck style debugging, or perhaps simple demonstrations of syntax. For this project I avoided code generation of any kind.
 
 ### Credits/Acknowledgements
 - [highlight.js](https://highlightjs.org/) (for syntax highlighting)
 - [GitHub animated corners](https://github.com/eugena/github-animated-corners/) (for the animated github corner link)
 - [This public domain css reset](https://meyerweb.com/eric/tools/css/reset/)
+- [This favicon generator](https://realfavicongenerator.net/)
 
 ### Other Projects
 For the sake of demonstrating experience, some other projects I've done are:
@@ -17,3 +27,5 @@ For the sake of demonstrating experience, some other projects I've done are:
 - [Silence Between The Notes](https://silence-between-the-notes.surge.sh/): This was a very very small proof of concept I hacked together for a friend one evening. It's really just an interface for a [javascript library](https://www.vexflow.com/) that renders muscial staffs to a webpage.
 
 - [Techcyte](https://techcyte.com/products/automated-blood-differential/) At a job I had in 2014 I was responsible for standing up a web application that read machine learning data from a database and allowing a medical tech to correct or annotate images of blood cells. I was responsible for the front end all the way up until the database read. My understanding is that the app has changed significantly since then but you can still view a screenshot of it with some updated styles on the linked page.
+
+

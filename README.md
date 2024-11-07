@@ -31,3 +31,6 @@ For the sake of demonstrating experience, some other projects I've done are:
 - [Techcyte](https://techcyte.com/products/automated-blood-differential/) At a job I had in 2014 I was responsible for standing up a prototype web application that read machine learning data from a database and allowing a medical tech to correct or annotate images of blood cells. I was responsible for the front end all the way up until the database read. My understanding is that the app has changed significantly since then but you can still view a screenshot of it with some updated styles on the linked page.
 
 - I've worked in a myriad of web adjacent roles, often involving security. Feel free to check out my [GitHub Profile](github.com/alex0112) or my [LinkedIn](https://www.linkedin.com/in/kingsfoil/details/experience/) for details.
+
+### Running this project
+If for some reason you wished to run this project locally, a simple call to `make dev` will do the trick on an average UNIX like system with python installed.

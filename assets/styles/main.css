@@ -1,0 +1,16 @@
+@import url("reset.css");
+@import url("gruvbox-dark-hard.min.css");
+
+#main-grid {
+    background: orange;
+}
+
+#url-form {
+    background: red;
+}
+
+#quick-links {
+    background: green;
+}
+
+

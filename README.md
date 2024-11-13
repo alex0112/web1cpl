@@ -10,7 +10,7 @@ My goal in creating this page was to demonstrate the knowledge listed on the syl
 
 ## How this site was built:
 
-I wrote this site in vanilla HTML/CSS/Javascript with the goal of keeping it lightweight and easy to statically serve through a CDN. I used a simple CSS Grid for the layout and designed it to be reasonably mobile responsive. Unless indicated in the credits/acknowledgements section, all the work is my own written with my [preferred setup](https://github.com/alex0112/dotfiles/tree/master). This site is deployed with [surge.sh](https://surge.sh/).
+I wrote this site in vanilla HTML/CSS/Javascript with the goal of keeping it lightweight and easy to statically serve through a CDN. I used a simple CSS Flexbox for the layout and designed it to be reasonably mobile responsive. Unless indicated in the credits/acknowledgements section, all the work is my own written with my [preferred setup](https://github.com/alex0112/dotfiles/tree/master). This site is deployed with [surge.sh](https://surge.sh/).
 
 ### A note about A.I.
 I do not use LLMs (e.g. ChatGPT, Claude etc.) to generate code, as I feel this ultimately deprives me of the context surrounding a codebase. When working I typically leverage LLMs for concept related questions, search, and rubber-duck style debugging, or perhaps simple demonstrations of syntax. For this project I avoided code generation of any kind.

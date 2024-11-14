@@ -1,25 +1,29 @@
 @import url("reset.css");
-@import url("loader.css");
+/* @import url("loader.css"); */
 @import url("gruvbox-dark-hard.min.css");
 
-main {
-    width: 100vw;
+body, main {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 #container {
-    background: orange;
+    background: aliceblue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 0;
     column-gap: 0;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
 }
 
 #code {
+    background: blue;
+    width: 100%;
 }
 
 #url-form {
@@ -32,13 +36,11 @@ main {
 
 .small-section {
     flex-grow: 2;
+    height: 100%;
 }
-
 
 /* highlight.js overrides */
 pre code.hljs {
     padding: 0;
     width: 100vw;
-    height: 100%;
 }
-

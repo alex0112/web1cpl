@@ -16,45 +16,15 @@
   </head>
   
   <script src="/assets/scripts/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script src="/assets/scripts/main.js"></script>
+  <!-- <script>hljs.highlightAll();</script> -->
 
   <body>
     <main id="container">
-
       <section id="code">
-                <pre><code>
-             async fn run_server() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-                 // First parameter is port number (optional, defaults to 7331)
-                 let port = match env::args().nth(1) {
-                     Some(ref p) => p.to_owned(),
-                     None => "7331".to_owned(),
-                 };
-                 let addr = format!("127.0.0.1:{}", port).parse()?;
-
-                 // Load public certificate.
-                 let certs = load_certs("examples/sample.pem")?;
-                 // Load private key.
-                 let key = load_private_key("examples/sample.rsa")?;
-                 // Build TLS configuration.
-                 let acceptor: TlsAcceptor = build_tls_acceptor(certs, key, addr);
-
-                 // Create a TCP listener via tokio.
-                 let incoming = AddrIncoming::bind(&addr)?;
-                 let acceptor = TlsAcceptor::builder()
-                     .with_single_cert(certs, key)
-                     .map_err(|e| error(format!("{}", e)))?
-                     .with_all_versions_alpn()
-                     .with_incoming(incoming);
-                 
-                 let service = make_service_fn(|_| async { Ok::<_, io::Error>(service_fn(echo)) });
-                 let server = Server::builder(acceptor).serve(service);
-                 
-                 // Run the future, keep going until an error occurs.
-                 println!("Starting to serve on https://{}.", addr);
-                 server.await?;
-                 Ok(())
-             }
-          </code></pre>
+        <pre><code>
+            Select an option below to preview some code
+        </pre></code>
 
       </section>
 
@@ -75,5 +45,15 @@
       </section>
 
     </main>
+    <!-- <script type="text/javascript"> -->
+    <!--   let codeBlock = document.querySelector("#code > pre > code"); -->
+      
+    <!--   let text = "<div><b>omg some html</b></div>"; -->
+    <!--   codeBlock.textContent = text; -->
+      
+    <!--   hljs.highlightAll(); -->
+      
+    <!--   console.log("did the thing"); -->
+    <!--   </script> -->
   </body>
 </html>

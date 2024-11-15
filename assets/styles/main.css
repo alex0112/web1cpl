@@ -22,8 +22,19 @@ body, main {
 }
 
 #code {
-    background: blue;
     width: 100%;
+    max-height: 67%;
+    overflow: scroll;
+    scrollbar-width: thin;
+    /* scrollbar-color:  #9E8387 #1D2021; */
+    /* scrollbar-color: #5E6493 #1D2021; */
+    scrollbar-color: #3cf51b #1D2021;
+    
+    
+}
+
+#code > pre > code {
+    overflow: hidden;
 }
 
 #url-form {

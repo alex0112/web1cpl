@@ -22,6 +22,7 @@
   <body>
     <main id="container">
       <section id="code">
+        <div id="loader"></div>
         <pre><code>
             Select an option below to preview some code
         </pre></code>
@@ -40,21 +41,11 @@
           <form>
             <label for="url-input">Enter a Github File URL</label>
             <input name="url-input" id="url-input" type="url" placeholder="https://github.com/BurntSushi/ripgrep/blob/master/crates/cli/src/pattern.rs" required />
-            <button form="url-form" formaction="validateGitHubURL()">Go</button>
+            <button form="url-form" onClick="validateGithubURL()">Go</button>
           </form>
         </section>
       </div>
 
     </main>
-    <!-- <script type="text/javascript"> -->
-    <!--   let codeBlock = document.querySelector("#code > pre > code"); -->
-      
-    <!--   let text = "<div><b>omg some html</b></div>"; -->
-    <!--   codeBlock.textContent = text; -->
-      
-    <!--   hljs.highlightAll(); -->
-      
-    <!--   console.log("did the thing"); -->
-    <!--   </script> -->
   </body>
 </html>

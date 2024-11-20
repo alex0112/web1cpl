@@ -1,5 +1,5 @@
 @import url("reset.css");
-/* @import url("loader.css"); */
+@import url("loader.css");
 @import url("gruvbox-dark-hard.min.css");
 
 body, main {
@@ -9,7 +9,6 @@ body, main {
     height: 100vh;
     background: #FFECD1;
 }
-
 
 #container {
     background: #6A7768;
@@ -21,14 +20,17 @@ body, main {
 }
 
 #code {
+    font-size: 12.5pt;
     width: 100%;
-    max-height: 67%;
+    height: 50%;
+    padding-top: 10vh;
     overflow: scroll;
     scrollbar-width: thin;
     /* scrollbar-color:  #9E8387 #1D2021; */
     /* scrollbar-color: #5E6493 #1D2021; */
     scrollbar-color: #1D2021 #001524;
     background: #001524;
+
 }
 
 #code > pre > code {

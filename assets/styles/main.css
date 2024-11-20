@@ -7,18 +7,17 @@ body, main {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    background: #FFECD1;
 }
 
+
 #container {
-    background: aliceblue;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    background: #6A7768;
     row-gap: 0;
     column-gap: 0;
     width: 100%;
     height: 100%;
+    margin-left: 10vw;
 }
 
 #code {
@@ -28,26 +27,32 @@ body, main {
     scrollbar-width: thin;
     /* scrollbar-color:  #9E8387 #1D2021; */
     /* scrollbar-color: #5E6493 #1D2021; */
-    scrollbar-color: #3cf51b #1D2021;
-    
-    
+    scrollbar-color: #1D2021 #001524;
+    background: #001524;
 }
 
 #code > pre > code {
     overflow: hidden;
+    background: #001524;
+    padding-left: 30px;
+}
+
+#flex-sections {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
 #url-form {
-    background: red;
+    background: #78290F;
 }
 
 #quick-links {
-    background: green;
+    background: #15616D;
 }
 
 .small-section {
-    flex-grow: 2;
-    height: 100%;
+    flex: 2 1;
 }
 
 /* highlight.js overrides */

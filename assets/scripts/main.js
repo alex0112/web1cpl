@@ -22,6 +22,7 @@ function updateCodeBlock(url) {
     .catch(error => console.error('Error:', error));
 }
 
-let test_url = "https://raw.githubusercontent.com/git/git/refs/heads/master/grep.c";
+// let test_url = "https://raw.githubusercontent.com/git/git/refs/heads/master/grep.c";
+let test_url = "https://raw.githubusercontent.com/alex0112/prxs/refs/heads/main/src/input_state.rs";
 
 document.addEventListener('DOMContentLoaded', updateCodeBlock(test_url))

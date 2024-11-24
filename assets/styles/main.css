@@ -2,11 +2,9 @@
 @import url("loader.css");
 @import url("gruvbox-dark-hard.min.css");
 
-body, main {
+body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
     background: #FFECD1;
 }
 
@@ -14,15 +12,17 @@ body, main {
     background: #6A7768;
     row-gap: 0;
     column-gap: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin-left: 10vw;
+    margin: 0 auto;
+    /* margin-left: 10vw; */
 }
 
 #code {
     font-size: 12.5pt;
     width: 100%;
-    height: 50%;
+    height: auto;
+    max-height: 50vh;
     padding-top: 10vh;
     overflow: scroll;
     scrollbar-width: thin;
@@ -30,19 +30,20 @@ body, main {
     /* scrollbar-color: #5E6493 #1D2021; */
     scrollbar-color: #1D2021 #001524;
     background: #001524;
-
 }
 
 #code > pre > code {
     overflow: hidden;
     background: #001524;
     padding-left: 30px;
+    padidng-right: 30px;
 }
 
 #flex-sections {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    flex: 1;
+    overflow: auto;
 }
 
 #url-form {
@@ -50,7 +51,15 @@ body, main {
 }
 
 #quick-links {
+    overflow: auto;
     background: #15616D;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 10px;
+}
+
+.quicklink-preview {
 }
 
 .small-section {

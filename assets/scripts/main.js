@@ -25,7 +25,7 @@ function fetchGithubURL(url) {
   ////////////////////////////////////
 
   const rawURL = generateRawURL(url);
-  updateCodeBlock(rawURL);
+  updateCodeBlock(rawURL, url);
 }
 
 function validateGithubURL(url) {
@@ -43,7 +43,7 @@ function generateRawURL(url) {
   return url;
 }
 
-function updateCodeBlock(url) {
+function updateCodeBlock(rawURL, originalURL) {
   const loader    = document.querySelector("#loader");;
   const codeBlock = document.querySelector("#code > pre > code");
 
@@ -52,7 +52,7 @@ function updateCodeBlock(url) {
   codeBlock.style.display = "none";
 
   // fetch the URL
-  fetch(url, {redirect: "follow"})
+  fetch(rawURL, {redirect: "follow"})
     .then(response => response.text())
     .then(data => {
 
@@ -61,9 +61,12 @@ function updateCodeBlock(url) {
 
       // Update the codeblock with the content of the github source
       codeBlock.textContent = data;
-      codeBlock.removeAttribute("data-highlighted"); // It needs to remove this or we don't get any new highlighted content from hl.js
-      // console.log(`Got ${data} back from the fetcher`);
+      codeBlock.removeAttribute("data-highlighted"); // need to remove this or we don't get any new highlighted content from hl.js
       hljs.highlightAll();
+
+      if (originalURL) {
+        document.querySelector("#current-url").textContent = `The file being previewed is ${originalURL}`;
+      }
     })
     .catch(error => console.error('Error:', error));
 }

@@ -61,6 +61,11 @@ body {
 }
 
 .quicklink-preview {
+    font-size: 42pt;
+    border: none;
+    border-radius: 12px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
 }
 
 .small-section {

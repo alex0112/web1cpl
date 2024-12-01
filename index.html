@@ -23,17 +23,26 @@
       <section id="code">
         <div id="loader"></div>
         <pre><code>
-            Select an option below to preview some code
+            Select an option below to preview a GitHub blob
         </pre></code>
       </section>
 
       <div id="flex-sections">
         <section id="quick-links" class="small-section">
-          <button class="quicklink-preview" data-url="">link</button>
-          <button class="quicklink-preview" data-url="">link</button>
-          <button class="quicklink-preview" data-url="">link</button>
-          <button class="quicklink-preview" data-url="">link</button>
-          <button class="quicklink-preview" data-url="">link</button>
+          <button class="quicklink-preview" data-url="https://github.com/coreutils/coreutils/blob/master/src/shred.c" onClick="fetchGithubURL(this.getAttribute('data-url'))">shred</button>
+          <button class="quicklink-preview" data-url="https://github.com/payloadbox/xss-payload-list/blob/master/Intruder/xss-payload-list.txt" onClick="fetchGithubURL(this.getAttribute('data-url'))">xss payloads</button>
+          <button class="quicklink-preview" data-url="https://github.com/alex0112/prxs/blob/main/src/main.rs" onClick="fetchGithubURL(this.getAttribute('data-url'))">rust</button>
+
+          <button class="quicklink-preview" data-url="https://github.com/gohugoio/hugo/blob/master/commands/convert.go" onClick="fetchGithubURL(this.getAttribute('data-url'))">go</button>
+
+          <button class="quicklink-preview" data-url="https://github.com/alex0112/mappy/blob/master/mappy.pl" onClick="fetchGithubURL(this.getAttribute('data-url'))">perl</button>
+
+          <button class="quicklink-preview" data-url="https://github.com/jwt/ruby-jwt/blob/main/lib/jwt/token.rb" onClick="fetchGithubURL(this.getAttribute('data-url'))">ruby</button>
+
+          <button class="quicklink-preview" data-url="https://github.com/tensorflow/models/blob/master/orbit/controller.py" onClick="fetchGithubURL(this.getAttribute('data-url'))">python</button>
+
+          <button class="quicklink-preview" data-url="https://github.com/jgm/pandoc/blob/main/src/Text/Pandoc/Parsing/General.hs" onClick="fetchGithubURL(this.getAttribute('data-url'))">haskell</button>
+
           <button class="quicklink-preview" data-url="">link</button>
           <button class="quicklink-preview" data-url="">link</button>
           <button class="quicklink-preview" data-url="">link</button>
@@ -41,11 +50,12 @@
         </section>
         
         <section id="url-form" class="small-section">
-          <form>
+          <div>
             <label for="url-input">Enter a Github File URL</label>
             <input name="url-input" id="url-input" type="url" placeholder="https://github.com/BurntSushi/ripgrep/blob/master/crates/cli/src/pattern.rs" required />
-            <button form="url-form" onClick="validateGithubURL()">Go</button>
-          </form>
+            <button form="url-https://github.com/payloadbox/xss-payload-list/raw/refs/heads/master/Intruder/xss-payload-list.txtform" onClick="submitButtonHandler()">Go</button>
+          </div>
+          <span id="error-display"></span>
         </section>
       </div>
 

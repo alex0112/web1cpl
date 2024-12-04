@@ -1,12 +1,12 @@
 /* Credit:  */
 /* HTML: <div id="loader"></div> */
 #loader {
-  width: 45px;
+  width: 70px;
   aspect-ratio: 1;
   --c: conic-gradient(from -90deg,#FFFF 90deg, #0000 0);
   background: var(--c), var(--c);
   background-size: 40% 40%;
-  animation: l20 0.25s infinite;
+  animation: l20 1s infinite;
 }
 @keyframes l20 {
  0%,

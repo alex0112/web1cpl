@@ -24,7 +24,7 @@ body {
     font-size: 12.5pt;
     width: 100%;
     height: auto;
-    max-height: 50vh;
+    height: 50vh;
     padding-top: 7vh;
     padding-left: 2vw;
     overflow: scroll;
@@ -33,6 +33,12 @@ body {
     /* scrollbar-color: #5E6493 #1D2021; */
     scrollbar-color: #1D2021 #001524;
     background: #001524;
+}
+
+#loader {
+    position: relative;
+    top: 50%;
+    left: 50%;
 }
 
 #code > pre > code {

@@ -32,7 +32,7 @@ body {
 }
 
 #code > pre > code {
-    overflow: hidden;
+    overflow: scroll;
     background: #001524;
     padding-left: 30px;
     padidng-right: 30px;
@@ -116,6 +116,7 @@ pre code.hljs {
     #flex-sections {
         flex-direction: column-reverse;
         flex-wrap: nowrap;
+        overflow: visible;
     }
 
     #quick-links {
@@ -133,5 +134,6 @@ pre code.hljs {
         
         aspect-ratio: 1 / 1;
     }
+
 
 }

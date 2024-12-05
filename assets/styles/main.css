@@ -1,7 +1,6 @@
 @import url("reset.css");
 @import url("loader.css");
 @import url("gruvbox-dark-hard.min.css");
-@import url("animations.css");
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
 body {
@@ -65,7 +64,6 @@ body {
     grid-template-columns: 150px 150px auto;
     grid-gap: 25px;
     padding: 10px;
-    min-width: 500px;
 }
 
 #quick-links button:nth-child(3n) {
@@ -112,4 +110,28 @@ body {
 pre code.hljs {
     padding: 0;
     width: 100vw;
+}
+
+@media (max-width: 1000px) {
+    #flex-sections {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    #quick-links {
+        overflow: visible;
+        grid-template-columns: repeat(3, calc(30vw - 5px));
+        grid-gap: 10px;
+        margin-x: 10px;
+            
+    }
+
+    .quicklink-preview {
+        height: unset;
+        width: min(150px, 100%);
+        margin: auto;
+        
+        aspect-ratio: 1 / 1;
+    }
+
 }

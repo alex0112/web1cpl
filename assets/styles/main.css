@@ -43,11 +43,12 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1;
+    flex-wrap: wrap;
     overflow: auto;
 }
 
 .small-section {
-    flex: 2 1;
+    flex: 1 0 500px;
     justify-content: center;
 }
 
@@ -64,6 +65,7 @@ body {
     grid-template-columns: 150px 150px auto;
     grid-gap: 25px;
     padding: 10px;
+    min-width: 500px;
 }
 
 #quick-links button:nth-child(3n) {
@@ -105,7 +107,6 @@ body {
     border: none;
     border-radius: 12px;
 }
-
 
 /* highlight.js overrides */
 pre code.hljs {

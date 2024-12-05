@@ -1,6 +1,7 @@
 @import url("reset.css");
 @import url("loader.css");
 @import url("gruvbox-dark-hard.min.css");
+@import url("animations.css");
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
 body {
@@ -15,15 +16,12 @@ body {
 
 #code {
     font-size: 12.5pt;
-    width: 100%;
     height: auto;
     height: 50vh;
     padding-top: 7vh;
     padding-left: 2vw;
     overflow: scroll;
     scrollbar-width: thin;
-    /* scrollbar-color:  #9E8387 #1D2021; */
-    /* scrollbar-color: #5E6493 #1D2021; */
     scrollbar-color: #1D2021 #001524;
     background: #001524;
 }
@@ -48,6 +46,12 @@ body {
     overflow: auto;
 }
 
+.small-section {
+    flex: 2 1;
+    justify-content: center;
+}
+
+
 #url-form {
     background: #3b4252;
 }
@@ -56,9 +60,14 @@ body {
     overflow: auto;
     background: #4c566a;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 150px 150px auto;
     grid-gap: 25px;
     padding: 10px;
+}
+
+#quick-links button:nth-child(3n) {
+    align-self: end;
 }
 
 .quicklink-preview {
@@ -69,7 +78,6 @@ body {
     aspect-ratio: 1 / 1;
     background: #d8dee9;
 }
-
 
 #url-input:focus {
     border: none;
@@ -98,9 +106,6 @@ body {
     border-radius: 12px;
 }
 
-.small-section {
-    flex: 2 1;
-}
 
 /* highlight.js overrides */
 pre code.hljs {

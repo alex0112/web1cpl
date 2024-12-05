@@ -1,5 +1,3 @@
-// https://raw.githubusercontent.com/alex0112/dotfiles/refs/heads/master/.bashrc
-
 function submitButtonHandler(event) {
   const urlInput = document.querySelector("#url-input");
   const url = urlInput.value;
@@ -20,12 +18,8 @@ function submitButtonHandler(event) {
 }
 
 function fetchGithubURL(url) {
-  ////////////////////////////////////
-  // Invokes the code block update. //
-  ////////////////////////////////////
-
   const rawURL = generateRawURL(url);
-  updateCodeBlock(rawURL, url);
+  updateCodeBlock(rawURL, url);  // Invokes the code block update.
 }
 
 function validateGithubURL(url) {
@@ -55,6 +49,12 @@ function updateCodeBlock(rawURL, originalURL) {
   fetch(rawURL, {redirect: "follow"})
     .then(response => response.text())
     .then(data => {
+
+      window.scrollTo({ // put the user at the top of the page (best on mobile)
+        top: 0,
+        behavior: "smooth"
+      });
+
 
       loader.style.display = "none";
       codeBlock.style.display = "block";

@@ -3,6 +3,10 @@
 @import url("gruvbox-dark-hard.min.css");
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -77,6 +81,7 @@ body {
     height: 150px;
     aspect-ratio: 1 / 1;
     background: #d8dee9;
+    cursor: pointer;
 }
 
 #url-input:focus {

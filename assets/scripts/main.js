@@ -73,7 +73,7 @@ function updateCodeBlock(rawURL, originalURL) {
         let link = document.createElement('a');
         
         link.setAttribute('href', originalURL);
-        link.setAttribute('_target', 'blank');
+        link.setAttribute('target', '_blank');
         link.textContent = filename;
 
         let currentURL = document.querySelector("#current-url");

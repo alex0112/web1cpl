@@ -28,6 +28,10 @@ function validateGithubURL(url) {
   return githubMatcher.test(url);
 }
 
+function parseFileName(url) {
+  return url.split('/').slice(-1)[0];
+}
+
 // https://github.com/alex0112/yggdrasil/blob/master/public/index.js
 // https://raw.githubusercontent.com/alex0112/yggdrasil/refs/heads/master/public/index.js
 function generateRawURL(url) {
@@ -64,7 +68,17 @@ function updateCodeBlock(rawURL, originalURL) {
       hljs.highlightAll();
 
       if (originalURL) {
-        document.querySelector("#current-url").textContent = `File: ${originalURL}`;
+        
+        const filename = parseFileName(originalURL);
+        let link = document.createElement('a');
+        
+        link.setAttribute('href', originalURL);
+        link.setAttribute('_target', 'blank');
+        link.textContent = filename;
+
+        let currentURL = document.querySelector("#current-url");
+        currentURL.textContent = "File: ";
+        currentURL.appendChild(link);
       }
     })
     .catch(error => console.error('Error:', error));

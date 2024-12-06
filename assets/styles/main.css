@@ -169,6 +169,14 @@ body {
     justify-self: center;
 }
 
+#current-url a {
+    color: #ebcb8b;
+}
+
+#current-url a:visited {
+    color: #ebcb8b;
+}
+
 /* highlight.js overrides */
 pre code.hljs {
     padding: 0;

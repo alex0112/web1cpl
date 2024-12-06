@@ -50,7 +50,6 @@
 
           <button title="HTML5 source of this site" class="quicklink-preview nf nf-md-language_html5" data-url="https://github.com/alex0112/web1cpl/blob/main/index.html" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
 
-
           <button title="CSS3 source of this site" class="quicklink-preview nf nf-dev-css3_full" data-url="https://github.com/alex0112/web1cpl/blob/main/assets/styles/main.css" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
 
           <button title="JavsScript source of this site" class="quicklink-preview nf nf-md-language_javascript" data-url="https://github.com/alex0112/web1cpl/blob/main/assets/scripts/main.js" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
@@ -59,15 +58,14 @@
         
         <section id="url-form" class="small-section">
           <div id="input-area">
+            <span id="current-url"></span>
             <label for="url-input">Enter a Github File URL</label>
             <input name="url-input" id="url-input" type="url" placeholder="https://github.com/BurntSushi/ripgrep/blob/master/crates/cli/src/pattern.rs" required />
             <button id="go-button" class="nf nf-fa-arrow_right_long" onClick="submitButtonHandler()"></button>
             <span id="error-display"></span>
-            <span id="current-url"></p>
           </div>
         </section>
       </div>
-
     </main>
   </body>
 </html>

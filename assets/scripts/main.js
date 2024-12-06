@@ -45,16 +45,15 @@ function updateCodeBlock(rawURL, originalURL) {
   loader.style.display = "block";
   codeBlock.style.display = "none";
 
+  window.scrollTo({ // put the user at the top of the page (best on mobile)
+    top: 0,
+    behavior: "smooth"
+  });
+
   // fetch the URL
   fetch(rawURL, {redirect: "follow"})
     .then(response => response.text())
     .then(data => {
-
-      window.scrollTo({ // put the user at the top of the page (best on mobile)
-        top: 0,
-        behavior: "smooth"
-      });
-
 
       loader.style.display = "none";
       codeBlock.style.display = "block";

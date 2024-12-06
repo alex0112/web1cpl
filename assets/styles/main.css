@@ -60,6 +60,25 @@ body {
     background: #3b4252;
 }
 
+#input-area {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    grid-template-rows: 30% 65px auto;
+    grid-template-columns: 100%;
+    padding: 0 10%;
+}
+
+
+#input-area label {
+    color: #d8dee9;
+    font-size: 30pt;
+    font-family: monospace;
+    align-self: end;
+}
+
 #quick-links {
     overflow: auto;
     background: #4c566a;
@@ -100,15 +119,47 @@ body {
     font-family: courier;
     spellcheck: false;
     background: #d8dee9;
+    grid-column: 1;
+    grid-row: 2;
+    width: calc(100% - 25px);
 }
 
 #go-button {
-    background: #d8dee9;
+    /* background: #d8dee9; */
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%, rgba(216,222,233,1) 100%); 
     height: 50px;
     width: 150px;
     font-size: 42pt;
     border: none;
     border-radius: 12px;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    border-radius: 25px;
+}
+
+#go-button:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(216,222,233,1) 100%); 
+}
+
+#error-display {
+    text-align: center;
+    color: #bf616a;
+    font-size: 30pt;
+    font-family: monospace;
+}
+
+
+#current-url {
+    color: #d8dee9;
+    font-family: monospace;
+    font-size: 20pt;
+    max-width: 80%;
+    word-break: break-word;
+    align-self: start;
+    justify-self: center;
 }
 
 /* highlight.js overrides */
@@ -147,14 +198,38 @@ pre code.hljs {
     #url-input {
         align-self: center;
         width: 90vw;
-        margin-top: 40%;
         border-radius: 5px;
     }
 
     #go-button {
         align-self: center;
-        margin-top: 10px;
         width: 90vw;
         border-radius: 5px;
+        width: 25%;
     }
+
+    #input-area {
+        height 33%;
+    }
+
+    #input-area label {
+        text-align: center;
+    }
+
+    #error-display {
+        text-align: center;
+        color: #bf616a;
+        font-size: 30pt;
+        font-family: monospace;
+    }
+
+    #current-url {
+        text-align: center;
+    }
+
+    #code > pre > code {
+        font-size: 30pt;
+    }
+
+    
 }

@@ -36,7 +36,7 @@ body {
 }
 
 #code > pre > code {
-    overflow: scroll;
+    overflow: visible;
     background: #001524;
     padding-left: 30px;
     padidng-right: 30px;
@@ -188,6 +188,10 @@ pre code.hljs {
 
 /* small screen size tweaks */
 @media (max-width: 1000px) {
+    #code > pre > code {
+        font-size: 18pt;
+    }
+
     #flex-sections {
         flex-direction: column-reverse;
         flex-wrap: nowrap;
@@ -246,7 +250,4 @@ pre code.hljs {
         text-align: center;
     }
 
-    #code > pre > code {
-        font-size: 30pt;
-    }
 }

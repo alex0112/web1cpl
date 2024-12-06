@@ -45,7 +45,7 @@ function updateCodeBlock(rawURL, originalURL) {
   loader.style.display = "block";
   codeBlock.style.display = "none";
 
-  window.scrollTo({ // put the user at the top of the page (best on mobile)
+  window.scrollTo({ // put the user at the top of the page (mobile)
     top: 0,
     behavior: "smooth"
   });
@@ -64,7 +64,7 @@ function updateCodeBlock(rawURL, originalURL) {
       hljs.highlightAll();
 
       if (originalURL) {
-        document.querySelector("#current-url").textContent = `The file being previewed is ${originalURL}`;
+        document.querySelector("#current-url").textContent = `File: ${originalURL}`;
       }
     })
     .catch(error => console.error('Error:', error));

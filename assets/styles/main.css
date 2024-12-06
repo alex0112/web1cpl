@@ -55,7 +55,6 @@ body {
     justify-content: center;
 }
 
-
 #url-form {
     background: #3b4252;
 }
@@ -76,6 +75,7 @@ body {
     color: #d8dee9;
     font-size: 30pt;
     font-family: monospace;
+    font-weight: bold;
     align-self: end;
 }
 
@@ -87,6 +87,13 @@ body {
     grid-template-columns: 150px 150px auto;
     grid-gap: 25px;
     padding: 10px;
+    transition: all .3s ease;
+}
+
+#quick-links button:hover {
+    box-shadow: 10px 11px 77px -32px rgba(255,255,255,1);
+    transform: translateY(-5px);
+    transition: all .3s ease;
 }
 
 #quick-links button:nth-child(3n) {
@@ -125,7 +132,6 @@ body {
 }
 
 #go-button {
-    /* background: #d8dee9; */
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%, rgba(216,222,233,1) 100%); 
     height: 50px;
@@ -137,11 +143,13 @@ body {
     grid-row: 2;
     justify-self: end;
     border-radius: 25px;
+    cursor: pointer;
+    transition: .3s ease;
 }
 
 #go-button:hover {
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(216,222,233,1) 100%); 
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(216,222,233,1) 100%);
 }
 
 #error-display {
@@ -150,7 +158,6 @@ body {
     font-size: 30pt;
     font-family: monospace;
 }
-
 
 #current-url {
     color: #d8dee9;
@@ -168,6 +175,7 @@ pre code.hljs {
     width: 100vw;
 }
 
+/* small screen size tweaks */
 @media (max-width: 1000px) {
     #flex-sections {
         flex-direction: column-reverse;
@@ -230,6 +238,4 @@ pre code.hljs {
     #code > pre > code {
         font-size: 30pt;
     }
-
-    
 }

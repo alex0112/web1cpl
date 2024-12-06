@@ -21,6 +21,7 @@ I do not use LLMs (e.g. ChatGPT, Claude etc.) to generate code, as I feel this u
 - [This public domain css reset](https://meyerweb.com/eric/tools/css/reset/)
 - [This favicon generator](https://realfavicongenerator.net/)
 - [Nerdfonts](https://www.nerdfonts.com/cheat-sheet) (for the icons)
+- [Nord](https://www.nordtheme.com/docs/colors-and-palettes) (for color pallette choices)
 
 ### Other Projects
 For the sake of demonstrating experience, some other projects I've done are:

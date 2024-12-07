@@ -6,7 +6,7 @@ This small static page takes a GitHub file URL, validates it, and then fetches t
 
 My goal in creating this page was to demonstrate the knowledge listed on the syllabus:
 
-![TODO Syllabus Image Here]()
+![Course Outcomes](https://github.com/user-attachments/assets/1911100a-e7b2-4ee4-b6b5-10e8859173ab)
 
 ## How this site was built:
 

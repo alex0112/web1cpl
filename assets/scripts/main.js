@@ -1,4 +1,6 @@
 function submitButtonHandler(event) {
+  event.preventDefault();
+
   const urlInput = document.querySelector("#url-input");
   const url = urlInput.value;
   const errorDisplay = document.querySelector("#error-display");
@@ -86,4 +88,5 @@ function updateCodeBlock(rawURL, originalURL) {
 
 // Update the code block with some initial text
 const initial_url = "https://raw.githubusercontent.com/alex0112/prxs/refs/heads/main/src/input_state.rs";
+
 document.addEventListener('DOMContentLoaded', () => updateCodeBlock(initial_url));

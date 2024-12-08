@@ -1,11 +1,15 @@
 @import url("reset.css");
 @import url("loader.css");
-@import url("gruvbox-dark-hard.min.css");
+/* @import url("gruvbox-dark-hard.min.css"); */
+/* @import url("ros-pine-moon.min.css"); */
+@import url("vulcan-theme.css");
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
 html {
     scroll-behavior: smooth;
     max-height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #1D2021 #001524;
 }
 
 body {

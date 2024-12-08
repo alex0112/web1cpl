@@ -5,16 +5,19 @@
 
 html {
     scroll-behavior: smooth;
+    max-height: 100vh;
 }
 
 body {
     margin: 0;
     padding: 0;
     background: #2e3440;
+    max-height: 100vh;
 }
 
 #container {
     background: #6A7768;
+    max-height: 100vh;
 }
 
 #code {
@@ -47,7 +50,6 @@ body {
     flex-direction: row;
     flex: 1;
     flex-wrap: wrap;
-    overflow: auto;
 }
 
 .small-section {
@@ -78,7 +80,7 @@ body {
     align-self: end;
     grid-column: 1;
     grid-row: 2;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 #quick-links {
@@ -86,7 +88,7 @@ body {
     background: #4c566a;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 150px 150px auto;
+    grid-template-columns: 150px 150px 150px;
     grid-gap: 25px;
     padding: 10px;
     transition: all .3s ease;
@@ -106,7 +108,7 @@ body {
     font-size: 42pt;
     border: none;
     border-radius: 12px;
-    height: 150px;
+    /* height: 150px; */
     aspect-ratio: 1 / 1;
     background: #d8dee9;
     cursor: pointer;
@@ -169,7 +171,7 @@ body {
     word-break: break-word;
     align-self: start;
     justify-self: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 #current-url a {
@@ -189,7 +191,7 @@ pre code.hljs {
 /* small screen size tweaks */
 @media (max-width: 1000px) {
     #code > pre > code {
-        font-size: 18pt;
+        font-size: 14pt;
     }
 
     #flex-sections {
@@ -225,14 +227,21 @@ pre code.hljs {
     }
 
     #go-button {
-        align-self: center;
+        justify-self: center;
         width: 90vw;
         border-radius: 5px;
-        width: 25%;
+        grid-row: 4;
+        background-image: none;
+        background: #ffff;
+        width: calc(90vw + 25px);
     }
 
+    #go-button:hover {
+        background-image: none;
+        background: #ffff;
+    }
+        
     #input-area {
-        height 33%;
     }
 
     #input-area label {
@@ -249,5 +258,4 @@ pre code.hljs {
     #current-url {
         text-align: center;
     }
-
 }

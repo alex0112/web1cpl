@@ -57,12 +57,13 @@
         </section>
         
         <section id="url-form" class="small-section">
-          <div id="input-area">
-            <span id="current-url"></span>
-            <label for="url-input">Enter a Github File URL</label>
-            <input name="url-input" id="url-input" type="url" placeholder="https://github.com/BurntSushi/ripgrep/blob/master/crates/cli/src/pattern.rs" required />
-            <button id="go-button" class="nf nf-fa-arrow_right_long" onClick="submitButtonHandler()"></button>
-            <span id="error-display"></span>
+          <form id="input-area" onSubmit="submitButtonHander()">
+              <span id="current-url"></span>
+              <label for="url-input">Enter a Github File URL</label>
+              <input name="url-input" id="url-input" type="url" placeholder="https://github.com/BurntSushi/ripgrep/blob/master/crates/cli/src/pattern.rs" required />
+              <button id="go-button" class="nf nf-fa-arrow_right_long" onClick="submitButtonHandler()"></button>
+              <span id="error-display"></span>
+            </form>
           </div>
         </section>
       </div>

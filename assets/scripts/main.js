@@ -1,6 +1,4 @@
 function submitButtonHandler(event) {
-  event.preventDefault();
-
   const urlInput = document.querySelector("#url-input");
   const url = urlInput.value;
   const errorDisplay = document.querySelector("#error-display");

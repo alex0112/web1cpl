@@ -52,18 +52,18 @@
 
           <button title="CSS3 source of this site" class="quicklink-preview nf nf-dev-css3_full" data-url="https://github.com/alex0112/web1cpl/blob/main/assets/styles/main.css" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
 
-          <button title="JavsScript source of this site" class="quicklink-preview nf nf-md-language_javascript" data-url="https://github.com/alex0112/web1cpl/blob/main/assets/scripts/main.js" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
+          <button title="JavaScript source of this site" class="quicklink-preview nf nf-md-language_javascript" data-url="https://github.com/alex0112/web1cpl/blob/main/assets/scripts/main.js" onClick="fetchGithubURL(this.getAttribute('data-url'))"></button>
 
         </section>
         
         <section id="url-form" class="small-section">
-          <form id="input-area" onSubmit="submitButtonHander()">
+          <div id="input-area">
               <span id="current-url"></span>
               <label for="url-input">Enter a Github File URL</label>
               <input name="url-input" id="url-input" type="url" placeholder="https://github.com/..." required />
               <button id="go-button" class="nf nf-fa-arrow_right_long" onClick="submitButtonHandler()"></button>
               <span id="error-display"></span>
-            </form>
+            </div>
         </section>
       </div>
     </main>
